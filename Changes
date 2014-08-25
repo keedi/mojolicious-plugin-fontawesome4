@@ -1,0 +1,5 @@
+Revision history for Mojolicious-Plugin-FontAwesome4
+
+4.1000
+       * Converted https://github.com/FortAwesome/Font-Awesome/ into
+         https://github.com/jhthorsen/mojolicious-plugin-fontawesome4
