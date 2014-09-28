@@ -1,5 +1,8 @@
 Revision history for Mojolicious-Plugin-FontAwesome4
 
+4.2001   Sun Sep 28 22:09:58 2014
+       * Forgot to update dependency with AssetPack 0.24
+
 4.2000   Sun Sep 28 22:08:48 2014
        * Updated to Font-Awesome v4.2.0
        * Fix unit test

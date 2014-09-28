@@ -6,7 +6,7 @@ Mojolicious::Plugin::FontAwesome4 - Mojolicious + http://fortawesome.github.io/F
 
 =head1 VERSION
 
-4.2000
+4.2001
 
 =head1 DESCRIPTION
 
@@ -42,7 +42,7 @@ use Mojo::Base 'Mojolicious::Plugin';
 use File::Spec::Functions 'catdir';
 use Cwd ();
 
-our $VERSION = '4.2000';
+our $VERSION = '4.2001';
 
 =head1 HELPERS
 

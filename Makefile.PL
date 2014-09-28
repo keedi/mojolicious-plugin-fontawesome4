@@ -20,7 +20,7 @@ WriteMakefile(
 ,
   PREREQ_PM => {
   'Mojolicious' => '5.00',
-  'Mojolicious::Plugin::AssetPack' => '0.22'
+  'Mojolicious::Plugin::AssetPack' => '0.24'
 }
 ,
   test => { TESTS => 't/*.t' },
