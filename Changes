@@ -1,5 +1,8 @@
 Revision history for Mojolicious-Plugin-FontAwesome4
 
+4.1001
+       * Fix unit test
+
 4.1000   Fri Aug 29 17:23:52 2014
        * Converted https://github.com/FortAwesome/Font-Awesome/ into
          https://github.com/jhthorsen/mojolicious-plugin-fontawesome4

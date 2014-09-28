@@ -4,11 +4,8 @@ use File::Spec::Functions 'catdir';
 use File::Basename 'dirname';
 use Mojolicious;
 
-mkdir 'lib/Mojolicious/Plugin/FontAwesome4/packed';
-plan skip_all => "Could not create lib/Mojolicious/Plugin/FontAwesome4/packed: $!" unless -d "lib/Mojolicious/Plugin/FontAwesome4/packed";
-
 for my $mode (qw( production development )) {
-  my $app = Mojolicious->new(home => Mojo::Home->new(Cwd::abs_path('t')) );
+  my $app = Mojolicious->new(home => Mojo::Home->new(Cwd::abs_path('t')));
   my $t = Test::Mojo->new($app);
   my ($css, $body);
 
@@ -19,7 +16,7 @@ for my $mode (qw( production development )) {
     $c->render(text => $c->asset('font-awesome4.css'));
   });
 
-  plan skip_all => 'sass is not present' unless $app->asset->preprocessors->has_subscribers('scss');
+  plan skip_all => 'sass is not present' unless $app->asset->preprocessors->can_process('scss');
 
   $t->get_ok('/')->status_is(200);
   $css = $t->tx->res->dom->at('link')->{href};
