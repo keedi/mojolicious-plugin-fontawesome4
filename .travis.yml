@@ -1,0 +1,11 @@
+language: perl
+perl:
+  - "5.20"
+  - "5.16"
+  - "5.10"
+install:
+  - "cpanm -n Test::Pod Test::Pod::Coverage IO::Socket::SSL"
+  - "cpanm -n https://github.com/jhthorsen/mojolicious-plugin-assetpack/archive/master.tar.gz"
+  - "cpanm -n --installdeps ."
+notifications:
+  email: false
