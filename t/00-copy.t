@@ -35,7 +35,7 @@ find(
     },
   },
   'scss',
-  'font',
+  'fonts',
 );
 
 ok -e "$BASE/scss/font-awesome.scss", "font-awesome.scss";

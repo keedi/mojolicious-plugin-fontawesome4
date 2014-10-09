@@ -11,6 +11,11 @@ my $t = Test::Mojo->new;
 
 for my $file (
   qw(
+  /font/FontAwesome.otf
+  /font/fontawesome-webfont.eot
+  /font/fontawesome-webfont.svg
+  /font/fontawesome-webfont.ttf
+  /font/fontawesome-webfont.woff
   /scss/font-awesome.scss
   /scss/font-awesome/_bordered-pulled.scss
   /scss/font-awesome/_core.scss
