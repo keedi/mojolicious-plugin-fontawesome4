@@ -65,7 +65,7 @@ SKIP: {
   $app->static->paths([Mojolicious::Plugin::FontAwesome4->asset_path]);
   $app->mode('development');
   $app->plugin('FontAwesome4');
-  is_deeply [packed_files()], [qw( font-awesome.css font-awesome4.cs font-awesome4.csss )], 'packed for development';
+  is_deeply [packed_files()], [qw( font-awesome.css font-awesome4.css )], 'packed for development';
 }
 
 done_testing;
