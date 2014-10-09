@@ -1,3 +1,17 @@
+^bower.json
+^component.json
+^composer.json
+^_config.yml
+^css
+^fonts
+^Gemfile
+^less
+^package.json
+^scss
+^src
+\.sass-cache
+^\.npmignore
+
 #!start included /home/jhthorsen/.perlbrew/perls/perl-5.18.2/lib/5.18.2/ExtUtils/MANIFEST.SKIP
 # Avoid version control files.
 \bRCS\b
