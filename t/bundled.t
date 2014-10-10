@@ -13,6 +13,13 @@ $app->routes->get('/test1' => 'test1');
 $t->get_ok('/test1')->status_is(200)->element_exists('i.fa-user.fa-4x')
   ->text_like('style', qr{\.fa-google:before}, '.fa-google:before');
 
+my $font    = $t->tx->res->dom->at('style')->text;
+my $font_re = qr{"(\.\./fonts/fontawesome-webfont\.woff[^"]+)"};
+like $font, $font_re, 'correct font path';
+
+$font = $font =~ $font_re ? $1 : 'could-not-find-font-in-css';
+$t->get_ok("/packed/$font")->status_is(200);
+
 done_testing;
 
 __DATA__

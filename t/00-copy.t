@@ -76,7 +76,7 @@ sub dest {
 
   return "$BASE/scss/font-awesome.scss"  if $name eq 'font-awesome.scss';
   return "$BASE/scss/font-awesome/$name" if $name =~ /^_.*\.scss$/;
-  return "$BASE/font/$name"              if $file =~ /\bfonts\b/;
+  return "$BASE/fonts/$name"             if $file =~ /\bfonts\b/;
   return;
 }
 
