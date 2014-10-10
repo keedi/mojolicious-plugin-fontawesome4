@@ -8,6 +8,7 @@ use File::Find;
 use File::Path qw( make_path remove_tree );
 
 plan skip_all => 'Cannot copy files without font-awesome.scss' unless -r 'scss/font-awesome.scss';
+plan skip_all => 'Cannot build files on install' if $INC{"Mojolicious/Plugin/FontAwesome4.pm"} =~ /\bblib\b/;
 
 my $CAN_SASS = do {
   my $app = Mojolicious->new;
