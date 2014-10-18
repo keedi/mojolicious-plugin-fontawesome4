@@ -1,5 +1,8 @@
 Revision history for Mojolicious-Plugin-FontAwesome4
 
+4.2004   Sat Oct 18 11:08:34 2014
+       * Accidentally deleted Mojolicious::Plugin::FontAwesome4 from CPAN
+
 4.2003   Fri Oct 10 10:01:27 2014
        * Fix fonts location
 
