@@ -5,9 +5,12 @@ use Test::More;
 
 $ENV{PATH} = '/dev/null';    # make sure sass is not found
 
-my $app = Mojolicious->new(mode => 'production');
-my $t = Test::Mojo->new($app);
+my $public = File::Spec->catdir(qw( t public ));
+my $app    = Mojolicious->new(mode => 'production');
+my $t      = Test::Mojo->new($app);
 
+mkdir $public or plan skip_all => "Could not mkdir $public: $!";
+$app->static->paths([$public]);
 $app->plugin('FontAwesome4');
 $app->routes->get('/test1' => 'test1');
 $t->get_ok('/test1')->status_is(200)->element_exists('i.fa-user.fa-4x')

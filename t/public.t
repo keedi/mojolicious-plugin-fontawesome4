@@ -1,12 +1,12 @@
 use Mojo::Base -base;
-use Mojolicious::Lite;
 use Test::Mojo;
 use Test::More;
 
 # Test that the assets can be fetched like normal files
 
+mkdir File::Spec->catdir(qw( t public ));
+use Mojolicious::Lite;
 plugin 'FontAwesome4';
-
 my $t = Test::Mojo->new;
 
 for my $file (

@@ -1,5 +1,8 @@
 Revision history for perl distribution Mojolicious-Plugin-FontAwesome4
 
+4.2005 Not Released
+ - Compatible with Mojolicious::Plugin::AssetPack 0.67
+
 4.2004 2014-10-18T11:08:34Z
  - Accidentally deleted Mojolicious::Plugin::FontAwesome4 from CPAN
 

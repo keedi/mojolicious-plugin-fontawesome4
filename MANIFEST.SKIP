@@ -74,3 +74,4 @@
 ^local/
 ^MANIFEST\.SKIP
 ^README\.pod
+^t/public

@@ -19,8 +19,7 @@ my $CAN_SASS = do {
 my $BASE = 'lib/Mojolicious/Plugin/FontAwesome4';
 mkdir $BASE or die "mkdir $BASE: $!" unless -d $BASE;
 
-remove_tree "$BASE/$_" for qw( fonts scss );
-remove_tree "$BASE/packed" if $CAN_SASS;
+find(sub { unlink $_ if -f and $_ ne '_assetpack.map' }, "$BASE/fonts", "$BASE/scss", "$BASE/packed");
 
 find(
   {
@@ -57,7 +56,8 @@ SKIP: {
   $app->mode('production');
   $app->static->paths([Mojolicious::Plugin::FontAwesome4->asset_path]);
   $app->plugin('FontAwesome4');
-  is_deeply [packed_files()], [qw( font-awesome4.css )], 'packed for production';
+  is_deeply [packed_files()], [qw( _assetpack.map font-awesome4-1f2277e4931dd7b4d944014ff3126037.min.css )],
+    'packed for production';
 }
 
 SKIP: {
@@ -66,7 +66,9 @@ SKIP: {
   $app->static->paths([Mojolicious::Plugin::FontAwesome4->asset_path]);
   $app->mode('development');
   $app->plugin('FontAwesome4');
-  is_deeply [packed_files()], [qw( font-awesome.css font-awesome4.css )], 'packed for development';
+  is_deeply [packed_files()],
+    [qw( _assetpack.map font-awesome.css font-awesome4-1f2277e4931dd7b4d944014ff3126037.min.css )],
+    'packed for development';
 }
 
 done_testing;

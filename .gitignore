@@ -47,3 +47,4 @@ stunnel.log
 /META*
 /MYMETA*
 /pm_to_blib
+t/public
